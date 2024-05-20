@@ -69,22 +69,29 @@
 
             echo "<p>Jenis Produk: $jenis_produk</p>";
             echo "<p>Standar BPOM: $standar_bpom</p>";
-            echo "<p>Nutrisi: $nutrisi (Kepastian: " . round($kepastian_nutrisi * 100, 2) . "%)</p>";
+            echo "<p>Nutrisi: $nutrisi (CF: " . round($kepastian_nutrisi * 100, 2) . "%)</p>";
             echo "<p>Keputusan: $keputusan</p>";
         }
-
-        function rand_float($st_num = 0, $end_num = 1, $mul = 1000000)
-        {
-            // Check if the start number is greater than the end number
-            if ($st_num > $end_num) {
-                return false; // Return false if start number is greater than end number
-            }
-            // Generate a random integer between the multiplied start and end numbers,
-            // then divide it by the multiplication factor to get a random float value
-            return mt_rand($st_num * $mul, $end_num * $mul) / $mul;
-        }
         ?>
+
+        <form action="index.php" method="">
+            <input type="submit" value="Kembali ke Halaman Utama">
+        </form>
     </div>
+
+
+    <?php
+    function rand_float($st_num = 0, $end_num = 1, $mul = 1000000)
+    {
+        // Check if the start number is greater than the end number
+        if ($st_num > $end_num) {
+            return false; // Return false if start number is greater than end number
+        }
+        // Generate a random integer between the multiplied start and end numbers,
+        // then divide it by the multiplication factor to get a random float value
+        return mt_rand($st_num * $mul, $end_num * $mul) / $mul;
+    }
+    ?>
 </body>
 
 </html>
