@@ -3,7 +3,7 @@
 
 <head>
     <title>Hasil Evaluasi</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
 <body>
