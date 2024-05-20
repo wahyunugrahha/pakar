@@ -2,45 +2,45 @@
 <html>
 
 <head>
-    <title>Food Product Decision</title>
+    <title>Keputusan Produk Makanan</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    <h1>Evaluate Food Product</h1>
+    <h1>Evaluasi Produk Makanan</h1>
     <form method="POST" action="evaluate.php">
-        <label>Product Type:</label>
-        <select name="product_type">
+        <label>Jenis Produk:</label>
+        <select name="jenis_produk">
             <option value="Rumahan">Rumahan</option>
             <option value="Industri">Industri</option>
         </select><br>
 
-        <label>BPOM Standard:</label>
-        <select name="bpom_standard">
+        <label>Standar BPOM:</label>
+        <select name="standar_bpom">
             <option value="Ya">Ya</option>
             <option value="Tidak">Tidak</option>
         </select><br>
 
-        <label>Calories:</label>
-        <select name="calories">
+        <label>Kalori:</label>
+        <select name="kalori">
             <option value="Ideal">Ideal</option>
             <option value="Tidak Ideal">Tidak Ideal</option>
         </select><br>
 
-        <label>Sugar:</label>
-        <select name="sugar">
+        <label>Gula:</label>
+        <select name="gula">
             <option value="Ideal">Ideal</option>
             <option value="Tidak Ideal">Tidak Ideal</option>
         </select><br>
 
-        <label>Fat:</label>
-        <select name="fat">
+        <label>Lemak:</label>
+        <select name="lemak">
             <option value="Ideal">Ideal</option>
             <option value="Tidak Ideal">Tidak Ideal</option>
         </select><br>
 
-        <label>Carbohydrates:</label>
-        <select name="carbohydrates">
+        <label>Karbohidrat:</label>
+        <select name="karbohidrat">
             <option value="Ideal">Ideal</option>
             <option value="Tidak Ideal">Tidak Ideal</option>
         </select><br>
@@ -51,7 +51,7 @@
             <option value="Tidak Ideal">Tidak Ideal</option>
         </select><br>
 
-        <input type="submit" value="Evaluate">
+        <input type="submit" value="Evaluasi">
     </form>
 </body>
 
