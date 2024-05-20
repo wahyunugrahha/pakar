@@ -45,6 +45,25 @@ form input[type="submit"]:hover {
   background-color: #218838;
 }
 
+form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
 .result {
   max-width: 600px;
   margin: 50px auto;
