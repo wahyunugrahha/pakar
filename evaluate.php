@@ -73,6 +73,9 @@
             echo "<p>Keputusan: $keputusan</p>";
         }
         ?>
+    <form action="index.php" method="POST">
+        <button type="submit">Kembali ke Halaman Utama</button>
+    </form>
     </div>
 </body>
 
