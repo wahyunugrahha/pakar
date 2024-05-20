@@ -21,8 +21,8 @@
 
             // Penanganan ketidakpastian
             $kepastian = [
-                'Ideal' => 1,
-                'Tidak Ideal' => 0.5
+                'Ideal' => 1.0,
+                'Tidak Ideal' => rand_float(0.0, 0.5)
             ];
 
             // Hitung tingkat Nutrisi dengan faktor kepastian
@@ -30,7 +30,7 @@
 
             if ($kepastian_nutrisi > 0.8) {
                 $nutrisi = "Bagus";
-            } elseif ($kepastian_nutrisi > 0.5) {
+            } elseif ($kepastian_nutrisi > 0.5 && $kepastian_nutrisi < 0.8) {
                 $nutrisi = "Cukup";
             } else {
                 $nutrisi = "Buruk";
@@ -69,8 +69,19 @@
 
             echo "<p>Jenis Produk: $jenis_produk</p>";
             echo "<p>Standar BPOM: $standar_bpom</p>";
-            echo "<p>Nutrisi: $nutrisi (Kepastian: " . round($kepastian_nutrisi * 100) . "%)</p>";
+            echo "<p>Nutrisi: $nutrisi (Kepastian: " . round($kepastian_nutrisi * 100, 2) . "%)</p>";
             echo "<p>Keputusan: $keputusan</p>";
+        }
+
+        function rand_float($st_num = 0, $end_num = 1, $mul = 1000000)
+        {
+            // Check if the start number is greater than the end number
+            if ($st_num > $end_num) {
+                return false; // Return false if start number is greater than end number
+            }
+            // Generate a random integer between the multiplied start and end numbers,
+            // then divide it by the multiplication factor to get a random float value
+            return mt_rand($st_num * $mul, $end_num * $mul) / $mul;
         }
         ?>
     </div>
